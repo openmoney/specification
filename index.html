@@ -60,7 +60,8 @@ ul { margin-top: 0; }
   
 <p>To use <em>open money</em> is to mind your own business.</p></li>
 
-<li><p>Every <em>steward</em> has a <em>stewardname</em>, and a public key. (In the current <a href="https://github.com/openmoney/">test/development implementation</a> the <em>steward</em> logs in using a password instead.)</p>
+<li><p>Every <em>steward</em> has a <em>stewardname</em>, and a public key.</p>
+<p>(In the current <a href="https://github.com/openmoney/current-implementation/">test/development implementation</a> the <em>steward</em> logs in using a password instead.)</p>
 </li>
 
 <li><p>A <em>steward</em> may optionally provide an email address and choose its notification settings.</p></li>
@@ -75,25 +76,26 @@ ul { margin-top: 0; }
 
 <ul>
 
-<li><p>When a <em>steward</em> registers, it is given a private <em>namespace</em> with the <em>namespace</em> name "<em>stewardname</em>" as a child of the <em>root namespace</em> configured. (In the current reference/test implementation, the <em>root namespace</em> is fixed as "cc" so every <em>steward</em> is given the <em>namespace</em> "<em>stewardname.cc</em>" upon registration).</p></li>
+<li><p>When a <em>steward</em> registers, it is given a private <em>namespace</em> with the <em>namespace</em> name "<em>stewardname</em>" as a child of the <em>root namespace</em> configured.</p>
+<p>(In the <a href="https://github.com/openmoney/current-implementation/">current reference/test implementation</a>, the <em>root namespace</em> is fixed as "cc" so every <em>steward</em> is given the <em>namespace</em> "<em>stewardname.cc</em>" upon registration.)</p></li>
 
 <li><p>Every <em>namespace</em> can also enclose a set of <em>currencies</em> or <em>accounts</em> under the control of that <em>namespace</em>'s <em>steward</em> - i.e.<ul>
-  <li><em>currency</em> parameters are declared by that <em>steward</em></li>
-  <li>access/usage terms are set by that <em>steward</em></li>
+  <li><em>currency</em> parameters are declared by that/those <em>steward</em>(s)</li>
+  <li>access/usage terms are set by that/those <em>steward</em>(s)</li>
   </ul></p></li>
   
 <li><p>Every <em>namespace</em> is managed (controlled) by a set of one or more <em>steward(s)</em> while every <em>steward</em> has responsibility for (control over) a set of zero or more <em>namespace</em>(s).</p></li>
 
-<li><p>Each <em>namespace</em> is identified by a string divided into substrings (<em>namespace names</em>, in each case a lower case letter followed by a string of arbitrary length containing any combinatation of lower case letters, digits, "_" or "-") separated by the character ".". Therefore, with the exception of the <em>root namespace</em>, each <em>namespace</em> comprises at least two parts - <em>namespace name</em>.<em>parent namespace</em> - where the latter identified by its full ancestry "path" back to the <em>root namespace</em>) and is therefore is globally unique [note 1]. For example, the following examples represent two different <em>namespaces</em>:<br />
+<li><p>Each <em>namespace</em> is identified by a string divided into substrings (<em>namespace names</em>, in each case a lower case letter followed by a string of arbitrary length containing any combinatation of lower case letters, digits, "_" or "-") separated by the character ".". Therefore, with the exception of the <em>root namespace</em>, each <em>namespace</em> comprises at least two parts - <em>child.parent</em> - where the latter identified by its full ancestry "path" back to the <em>root namespace</em>) and is therefore globally unique [note 1]. For example, the following examples represent two different <em>namespaces</em>:<br />
 &nbsp;&nbsp;<em>berkshire.england.uk.europe</em><br />
 &nbsp;&nbsp;<em>berkshire.massachussets.usa.north.america</em><br /> 
 where both have the same <em>namespace name</em> at the start of the string but each has a different <em>parent namespace</em>.</p></li>
 
-<li><p>Every <em>stewards</em> of a <em>namespace</em> is notified when any of its other <em>stewards</em> creates a child <em>namespace</em>, <em>currency</em> or <em>account</em> there.</p></li>
+<li><p>Every <em>steward</em> of a <em>namespace</em> is notified when any of its other <em>stewards</em> creates a child <em>namespace</em>, <em>currency</em> or <em>account</em> there.</p></li>
 
-<li><p>Every <em>stewards</em> of a <em>namespace</em> has the ability to <u>enable</u> or <u>disable</u> any of its child <em>namespaces</em>, <em>currencies</em> or <em>accounts</em>.</p></li>
+<li><p>Every <em>steward</em> of a <em>namespace</em> has the ability to <u>enable</u> or <u>disable</u> any of its child <em>namespaces</em>, <em>currencies</em> or <em>accounts</em>.</p></li>
 
-<li><p>Every <em>stewards</em> of a <em>namespace</em> has the ability to <u>move</u> child <em>namespaces</em>, <em>currencies</em> or <em>accounts</em> from their <em>namespace</em> to another (accessible) <em>namespace</em>.</p></li>
+<li><p>Every <em>steward</em> of a <em>namespace</em> has the ability to <u>move</u> child <em>namespaces</em>, <em>currencies</em> or <em>accounts</em> from their <em>namespace</em> to another (accessible) <em>namespace</em>.</p></li>
 
 <li><p>A <em>namespace</em> can be <u>public</u> or <u>private</u>:<ul>
 <li>When created, a child <em>namespace</em>, <em>currency</em> or <em>account</em> of a <u>public</u> <em>namespace</em> is <u>enabled by default</u>.</li>
