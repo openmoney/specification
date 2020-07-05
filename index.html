@@ -37,7 +37,7 @@ ul { margin-top: 0; }
 
 <p>Some of the current developments are linked from <a href="http://openmoney.cc/">openmoney.cc</a>.</p>
 
-<p>An <a href="https://github.com/om-tools/">openmoney</a> implementation is already freely available on line for test and demonstration purposes, and more will follow.</p>
+<p>An <a href="https://github.com/openmoney/">openmoney</a> implementation is already freely available on line for test and demonstration purposes, and more will follow.</p>
 
 <p>NB, <em>open money</em> is a special case of a broader concept: <em>open metrics</em>. The specification below generally applies to <em>open metrics</em> implementations as well.</p>
 
@@ -47,7 +47,9 @@ ul { margin-top: 0; }
 
 <hr size="1">
 
-<h3>stewards</h3>
+<h3>stewards</h3>    
+
+<p class="footnote"><strong>A note on pronouns</strong>: Since a <em>steward</em> may be a person or an organization, or possibly a machine, the gender-neutral <em>it</em> and <em>its</em> are used below.</p>
 
 <ul>
     
@@ -58,14 +60,14 @@ ul { margin-top: 0; }
   
 <p>To use <em>open money</em> is to mind your own business.</p></li>
 
-<li><p>Every <em>steward</em> has a <em>stewardname</em>, and a public key. (In the current <a href="https://github.com/om-tools/">test/development implementation</a> the <em>steward</em> logs in using a password instead.)</p>
+<li><p>Every <em>steward</em> has a <em>stewardname</em>, and a public key. (In the current <a href="https://github.com/openmoney/">test/development implementation</a> the <em>steward</em> logs in using a password instead.)</p>
 </li>
 
-<li><p>A <em>steward</em> may optionally provide an email and choose her/his/its notification settings.</p></li>
+<li><p>A <em>steward</em> may optionally provide an email and choose its notification settings.</p></li>
 
-<li><p>A <em>steward</em> uses her/his/its <em>stewardname</em> and private key to authenticate.</p></li>
+<li><p>A <em>steward</em> uses its <em>stewardname</em> and private key to authenticate.</p></li>
 
-<li><p>The <em>openmoney</em> implementation may make provision for the <em>steward</em>'s public and private key to be generated deterministically using her/his/its <em>stewardname</em> and password.</p></li>
+<li><p>The <em>openmoney</em> implementation may make provision for the <em>steward</em>'s public and private key to be generated deterministically using its <em>stewardname</em> and password.</p></li>
 
 </ul>
 
@@ -73,7 +75,7 @@ ul { margin-top: 0; }
 
 <ul>
 
-<li><p>When a <em>steward</em> registers, she/he/it is given a private <em>namespace</em> with the <em>namespace</em> name "<em>stewardname</em>" as a child of the <em>root namespace</em> configured. (In the current reference/test implementation, the <em>root namespace</em> is fixed as "cc" so every <em>steward</em> is given the <em>namespace</em> "<em>stewardname.cc</em>" upon registration).</p></li>
+<li><p>When a <em>steward</em> registers, it is given a private <em>namespace</em> with the <em>namespace</em> name "<em>stewardname</em>" as a child of the <em>root namespace</em> configured. (In the current reference/test implementation, the <em>root namespace</em> is fixed as "cc" so every <em>steward</em> is given the <em>namespace</em> "<em>stewardname.cc</em>" upon registration).</p></li>
 
 <li><p>Every <em>namespace</em> can also enclose a set of <em>currencies</em> or <em>accounts</em> under the control of that <em>namespace</em>'s <em>steward</em> - i.e.<ul>
   <li><em>currency</em> parameters are declared by that <em>steward</em></li>
@@ -123,12 +125,9 @@ where both have the same <em>namespace name</em> at the start of the string but 
 
 <ul>
 
-<li><p>An <em>account</em> has an <em>account name</em>, an <em>account parent 
-namespace</em>, a <em>currency</em>, a <em>currency parent namespace</em> and a
-set of <em>stewards</em>.</p></li>
+<li><p>An <em>account</em> has an <em>account name</em>, an <em>account parent namespace</em>, a <em>currency</em>, a <em>currency parent namespace</em> and a set of <em>stewards</em>.</p></li>
 
-<li><p>Account <em>stewards</em> post <em>journal <u>entries</u></em> from one 
-<em>account</em> to another <em>account</em> in the same <em>currency</em>.</p>
+<li><p>Account <em>stewards</em> post <em>journal <u>entries</u></em> from one <em>account</em> to another <em>account</em> in the same <em>currency</em>.</p>
 </li>
 
 </ul>
@@ -147,34 +146,20 @@ set of <em>stewards</em>.</p></li>
   <li>an <em>amount</em>.</li>
 </ul>is sent from the client to the server.</p>
 
-<p><u>If</u> the server is able to verify that the <em>namespaces</em>, 
-<em>currencies</em> and <em>accounts</em> specified in the <em>journal 
-entry</em> are all enabled, <u>then</u>:<ul>
-    <li>the <em>journal entry</em> is encrypted using the public keys 
-belonging to the <em><u>to</u> account</em>'s <em>steward</em>, the 
-<em><u>from</u> account</em>'s <em>steward</em> and <em>currency</em>'s 
-<em>steward</em>;</li>
-<li>the encrypted <em>journal entry</em> is stored on the server for their 
-retrieval;</li>
-<li>the <em>stewards</em> are notified (according to their preferences); 
-and</li>
+<p><u>If</u> the server is able to verify that the <em>namespaces</em>, <em>currencies</em> and <em>accounts</em> specified in the <em>journal entry</em> are all enabled, <u>then</u>:<ul>
+    <li>the <em>journal entry</em> is encrypted using the public keys belonging to the <em><u>to</u> account</em>'s <em>steward</em>, the <em><u>from</u> account</em>'s <em>steward</em> and <em>currency</em>'s <em>steward</em>;</li>
+<li>the encrypted <em>journal entry</em> is stored on the server for their retrieval;</li>
+<li>the <em>stewards</em> are notified (according to their preferences); and</li>
 <li>a <u>success response code</u> is returned to the client.</li>
 </ul><u>otherwise</u>:<ul>
-<li>an <u>error response code</u> is returned to the client indicating where 
-the point of failure lies (in most cases where an <em>accounts</em>, 
-<em>currency</em> or <em>namespaces</em> is disabled or nonexistent).</li>
+<li>an <u>error response code</u> is returned to the client indicating where the point of failure lies (in most cases where an <em>accounts</em>, <em>currency</em> or <em>namespaces</em> is disabled or nonexistent).</li>
 </ul>
 
-<li><p>A <em>steward</em> of an <em>account</em> can request a list of all 
-<em>journal entries</em> for transactions to or from that <em>account</em>.</p>
-</li>
+<li><p>A <em>steward</em> of an <em>account</em> can request a list of all <em>journal entries</em> for transactions to or from that <em>account</em>.</p> </li>
 
-<li><p>A <em>steward</em> of a <em>currency</em> can request a list of all 
-<em>journal entries</em> for transactions that <em>currency</em>.</p></li>
+<li><p>A <em>steward</em> of a <em>currency</em> can request a list of all <em>journal entries</em> for transactions that <em>currency</em>.</p></li>
 
-<li><p>Any <em>steward</em> of a <em>currency</em> has the ability to void a
-<em>journal</em> entry by posting a <em>reversing journal entry</em> on behalf
-of both parties.</p></li>
+<li><p>Any <em>steward</em> of a <em>currency</em> has the ability to void a <em>journal</em> entry by posting a <em>reversing journal entry</em> on behalf of both parties.</p></li>
 
 </p></li>
 
@@ -210,11 +195,11 @@ However, upon registration (currently) all <em>openmoney</em> <em>stewards</em> 
     
 <p>There is, however, no need to retain such information. An identifier comprising a short <em>stewardname</em> <u>as preferred</u> along with the <em>namespace</em></p> generated automatically from location details could entered at the time of registration.</p>
 
-<p>Alternatively, a completely random but unique initial <em>namespace</em> could be generated as a starting point for the new <em>steward</em> - after which she/he/it could create its own within an existing accessible <em>namespace</em>.</p>
+<p>Alternatively, a completely random but unique initial <em>namespace</em> could be generated as a starting point for the new <em>steward</em> - after which it could create its own within an existing accessible <em>namespace</em>.</p>
 
 <p><strong>Use of email address as <em>steward name</em>?</strong></p>
 
-<p>A better alternative might be to use the <em>steward</em>'s email address as the <em>stewardname</em> since this <em>should</em> be uniquely assigned to the <em>steward</em>. This would mean that the <em>stewardname</em> would change every time the <em>steward</em> changed her/his/its email address, but that would not be a problem as long as the (mutable) <em>stewardname</em> were mapped internally to an immutable ID (itself mapping to other mutable identification such as public key). The risk of misappropriation of the email address could be mitigated by the use of a <em>steward</em>-defined PIN.</p></li>
+<p>A better alternative might be to use the <em>steward</em>'s email address as the <em>stewardname</em> since this <em>should</em> be uniquely assigned to the <em>steward</em>. This would mean that the <em>stewardname</em> would change every time the <em>steward</em> changed its email address, but that would not be a problem as long as the (mutable) <em>stewardname</em> were mapped internally to an immutable ID (itself mapping to other mutable identification such as public key). The risk of misappropriation of the email address could be mitigated by the use of a <em>steward</em>-defined PIN.</p></li>
 
 </ol> 
 
