@@ -31,36 +31,19 @@ ul { margin-top: 0; }
     
 <h3>Introduction</h3>
     
-<p>The term <em>open money</em> (two words, lower case) is an aspect of free 
-speech - it is a context (see <a href="https://sites.google.com/site/economicgroups/neweconomy">REA</a>),
-and <em>open money</em> can be called <u>free</u> money (as in <em>free 
-speech</em>, not as in free beer/lunch/load/ride).</p>
+<p>The term <em>open money</em> (two words, lower case) is an aspect of free speech - it is a context (see <a href="https://sites.google.com/site/economicgroups/neweconomy">REA</a>), and <em>open money</em> can be called <u>free</u> money (as in <em>free speech</em>, not as in free beer/lunch/load/ride).</p>
 
-<p>The term <em>openmoney</em> (one word, lower case) refers to <u>any</u> 
-software able to support the requirements of an <em>open money</em> 
-implementation, operating in accordance with the principles and 
-intellectual properties of the <a href="http://letsystem.org/">LETSystem
-Trust</a>.</p>
+<p>The term <em>openmoney</em> (one word, lower case) refers to <u>any</u> software able to support the requirements of an <em>open money</em> implementation, operating in accordance with the principles and intellectual properties of the <a href="http://letsystem.org/">LETSystem Trust</a>.</p>
 
 <p>Some of the current developments are linked from <a href="http://openmoney.cc/">openmoney.cc</a>.</p>
 
-<p>An <a href="https://github.com/om-tools/">openmoney</a> implementation 
-is already freely available on line for test and demonstration purposes, 
-and more will follow.</p>
+<p>An <a href="https://github.com/om-tools/">openmoney</a> implementation is already freely available on line for test and demonstration purposes, and more will follow.</p>
 
-<p>NB, <em>open money</em> is a special case of a broader concept: <em>open
-metrics</em>. The specification below generally applies to <em>open metrics</em>
-implementations as well.</p>
+<p>NB, <em>open money</em> is a special case of a broader concept: <em>open metrics</em>. The specification below generally applies to <em>open metrics</em> implementations as well.</p>
 
-<p>The following is a minimal specification of the way in which any software 
-supporting <em>open money</em> should operate.</p>
+<p>The following is a minimal specification of the way in which any software supporting <em>open money</em> should operate.</p>
 
-<p>A <a href="https://github.com/openmoney/current-implementation/">reference/testing/demonstration
-implementation</a> was written by 
-<a href="https://github.com/deefactorial/">Dominique Legault</a>, who also 
-wrote the 
-<a href="https://paper.dropbox.com/doc/openmoney-specifications--A2ueQsb5n1iIn0oDC6yCjCFjAg-ZCwb9XOtbLSwZxrlnb5tR">original 
-draft</a> of this specification in collaboration with Michael Linton.</p>
+<p>A <a href="https://github.com/openmoney/current-implementation/">reference/testing/demonstration implementation</a> was written by <a href="https://github.com/deefactorial/">Dominique Legault</a>, who also wrote the <a href="https://paper.dropbox.com/doc/openmoney-specifications--A2ueQsb5n1iIn0oDC6yCjCFjAg-ZCwb9XOtbLSwZxrlnb5tR">original draft</a> of this specification in collaboration with Michael Linton.</p>
 
 <hr size="1">
 
@@ -68,29 +51,21 @@ draft</a> of this specification in collaboration with Michael Linton.</p>
 
 <ul>
     
-<li><p>A registered <u>steward</u> of any <em>openmoney</em> software can be any 
-person or organization of persons that recognizes and accepts responsibility 
-for:<ul>
+<li><p>A registered <u>steward</u> of any <em>openmoney</em> software can be any person or organization of persons that recognizes and accepts responsibility for:<ul>
   <li>accounting of events</li>
   <li>fulfilment of promises (commitments)</li>
   </ul></p>
   
 <p>To use <em>open money</em> is to mind your own business.</p></li>
 
-<li><p>Every <em>steward</em> has a <em>stewardname</em>, and a public 
-key. (In the current <a href="https://github.com/om-tools/">test/development 
-implementation</a> the <em>steward</em> logs in using a password instead.)</p>
+<li><p>Every <em>steward</em> has a <em>stewardname</em>, and a public key. (In the current <a href="https://github.com/om-tools/">test/development implementation</a> the <em>steward</em> logs in using a password instead.)</p>
 </li>
 
-<li><p>A <em>steward</em> may optionally provide an email and choose her/his/its
-notification settings.</p></li>
+<li><p>A <em>steward</em> may optionally provide an email and choose her/his/its notification settings.</p></li>
 
-<li><p>A <em>steward</em> uses her/his/its <em>stewardname</em> and 
-private key to authenticate.</p></li>
+<li><p>A <em>steward</em> uses her/his/its <em>stewardname</em> and private key to authenticate.</p></li>
 
-<li><p>The <em>openmoney</em> implementation may make provision for the 
-<em>steward</em>'s public and private key to be generated deterministically 
-using her/his/its <em>stewardname</em> and password.</p></li>
+<li><p>The <em>openmoney</em> implementation may make provision for the <em>steward</em>'s public and private key to be generated deterministically using her/his/its <em>stewardname</em> and password.</p></li>
 
 </ul>
 
@@ -98,58 +73,29 @@ using her/his/its <em>stewardname</em> and password.</p></li>
 
 <ul>
 
-<li><p>When a <em>steward</em> registers, she/he/it is given a private 
-<em>namespace</em> with the <em>namespace</em> name "<em>stewardname</em>" as a
-child of the <em>root namespace</em> configured. (In the current reference/test 
-implementation, the <em>root namespace</em> is fixed as "cc" so every 
-<em>steward</em> is given the <em>namespace</em> "<em>stewardname.cc</em>" upon 
-registration).</p></li>
+<li><p>When a <em>steward</em> registers, she/he/it is given a private <em>namespace</em> with the <em>namespace</em> name "<em>stewardname</em>" as a child of the <em>root namespace</em> configured. (In the current reference/test implementation, the <em>root namespace</em> is fixed as "cc" so every <em>steward</em> is given the <em>namespace</em> "<em>stewardname.cc</em>" upon registration).</p></li>
 
-<li><p>Every <em>namespace</em> can also enclose a set of <em>currencies</em> or 
-<em>accounts</em> under the control of that <em>namespace</em>'s
-<em>steward</em> - i.e.<ul>
-  <li>currency parameters are declared by that <em>steward</em></li>
+<li><p>Every <em>namespace</em> can also enclose a set of <em>currencies</em> or <em>accounts</em> under the control of that <em>namespace</em>'s <em>steward</em> - i.e.<ul>
+  <li><em>currency</em> parameters are declared by that <em>steward</em></li>
   <li>access/usage terms are set by that <em>steward</em></li>
   </ul></p></li>
   
-<li><p>Every <em>namespace</em> is managed (controlled) by a set of one or more 
-<em>steward(s)</em> while every <em>steward</em> has responsibility for (control 
-over) a set of zero or more <em>namespace</em>.</p></li>
+<li><p>Every <em>namespace</em> is managed (controlled) by a set of one or more <em>steward(s)</em> while every <em>steward</em> has responsibility for (control over) a set of zero or more <em>namespace</em>.</p></li>
 
-<li><p>Each <em>namespace</em> is identified by a string divided into substrings 
-(<em>namespace names</em>, in each case a lower case letter followed by a string 
-of arbitrary length containing any combinatation of lower case letters, digits, 
-"_" or "-") separated by the character ".". Therefore, with the exception of the 
-<em>root namespace</em>, each <em>namespace</em> comprises at least two parts 
-- <em>namespace name</em>.<em>parent namespace</em> - where the latter 
-identified by its full ancestry "path" back to the <em>root namespace</em>) and 
-is therefore is globally unique [note 1]. For example, the following examples 
-represent two different <em>namespaces</em>:<br />
+<li><p>Each <em>namespace</em> is identified by a string divided into substrings (<em>namespace names</em>, in each case a lower case letter followed by a string of arbitrary length containing any combinatation of lower case letters, digits, "_" or "-") separated by the character ".". Therefore, with the exception of the <em>root namespace</em>, each <em>namespace</em> comprises at least two parts - <em>namespace name</em>.<em>parent namespace</em> - where the latter identified by its full ancestry "path" back to the <em>root namespace</em>) and is therefore is globally unique [note 1]. For example, the following examples represent two different <em>namespaces</em>:<br />
 &nbsp;&nbsp;<em>berkshire.england.uk.europe</em><br />
-&nbsp;&nbsp;<em>berkshire.massachussets.usa.north.america</em><br />
-where both have the same <em>namespace name</em> at the start of the string but 
-each has a different <em>parent namespace</em>.</p></li>
+&nbsp;&nbsp;<em>berkshire.massachussets.usa.north.america</em><br /> 
+where both have the same <em>namespace name</em> at the start of the string but each has a different <em>parent namespace</em>.</p></li>
 
-<li><p>All <em>stewards</em> of a <em>namespace</em> are notified when any of its
-other <em>stewards</em> create a child <em>namespace</em>, <em>currency</em> or
-<em>account</em> there.</p></li>
+<li><p>All <em>stewards</em> of a <em>namespace</em> are notified when any of its other <em>stewards</em> create a child <em>namespace</em>, <em>currency</em> or <em>account</em> there.</p></li>
 
-<li><p>All <em>stewards</em> of a <em>namespace</em> have the ability to 
-<u>enable</u> or <u>disable</u> any of its child <em>namespaces</em>, 
-<em>currencies</em> or <em>accounts</em>.</p></li>
+<li><p>All <em>stewards</em> of a <em>namespace</em> have the ability to <u>enable</u> or <u>disable</u> any of its child <em>namespaces</em>, <em>currencies</em> or <em>accounts</em>.</p></li>
 
-<li><p>All <em>stewards</em> of a <em>namespace</em> have the ability to 
-<u>move</u> child <em>namespaces</em>, <em>currencies</em> or 
-<em>accounts</em> from their <em>namespace</em> to another (accessible)
-<em>namespace</em>.</p></li>
+<li><p>All <em>stewards</em> of a <em>namespace</em> have the ability to <u>move</u> child <em>namespaces</em>, <em>currencies</em> or <em>accounts</em> from their <em>namespace</em> to another (accessible) <em>namespace</em>.</p></li>
 
 <li><p>A <em>namespace</em> can be <u>public</u> or <u>private</u>:<ul>
-<li>When created, a child <em>namespace</em>, <em>currency</em> or 
-<em>account</em> of a <u>public</u> <em>namespace</em> is <u>enabled by 
-default</u>.</li>
-<li>When created, a child <em>namespace</em>, <em>currency</em> or 
-<em>account</em> of a <u>private</u> <em>namespace</em> is <u>disabled by 
-default</u>.</li>
+<li>When created, a child <em>namespace</em>, <em>currency</em> or <em>account</em> of a <u>public</u> <em>namespace</em> is <u>enabled by default</u>.</li>
+<li>When created, a child <em>namespace</em>, <em>currency</em> or <em>account</em> of a <u>private</u> <em>namespace</em> is <u>disabled by default</u>.</li>
 </ul></p></li>
 
 </ul>
@@ -158,23 +104,17 @@ default</u>.</li>
 
 <ul>
 
-<li><p>A <em>currency</em> has a <em>currency name</em>, a <em>parent 
-namespace</em>, and a set of zero or more <em>stewards</em>.</p></li>
+<li><p>A <em>currency</em> has a <em>currency name</em>, a <em>parent namespace</em>, and a set of zero or more <em>stewards</em>.</p></li>
 
-<li><p>Every <em>steward</em> of a <em>currency</em> is notified whenever any 
-<em>steward</em> creates an account that uses this currency.</p></li>
+<li><p>Every <em>steward</em> of a <em>currency</em> is notified whenever any <em>steward</em> creates an account that uses this <em>currency</em>.</p></li>
 
-<li><p>Every <em>steward</em> of a <em>currency</em> has the ability to enable 
-or disable <em>accounts</em> used by this <em>currency</em>.</p></li>
+<li><p>Every <em>steward</em> of a <em>currency</em> has the ability to enable or disable <em>accounts</em> used by this <em>currency</em>.</p></li>
 
-<li><p>Every <em>steward</em> of a <em>currency</em> gets a copy of all 
-journal entries that use that <em>currency</em>.</p></li>
+<li><p>Every <em>steward</em> of a <em>currency</em> gets a copy of all journal entries that use that <em>currency</em>.</p></li>
 
 <li><p>A <em>currency</em> can be <em>public</em> or <em>private</em>:<ul>
-<li>an <em>account</em> created to use a <em><u>public</u> currency</em> is 
-<u>enabled by default</u>.</li>
-<li>an <em>account</em> created to use a <em><u>private</u> currency</em> is 
-<u>disabled by default</u>.</li>
+<li>an <em>account</em> created to use a <em><u>public</u> currency</em> is <u>enabled by default</u>.</li>
+<li>an <em>account</em> created to use a <em><u>private</u> currency</em> is <u>disabled by default</u>.</li>
 </ul></li>
 
 </ul>
@@ -250,14 +190,7 @@ of both parties.</p></li>
 
 <p>From <a href="https://tools.ietf.org/html/rfc7519">https://tools.ietf.org/html/rfc7519</a>:
 
-<p>A name in a namespace that enables names to be allocated in a manner such 
-that they are highly unlikely to collide with other names.  Examples of 
-collision-resistant namespaces include: Domain Names, Object Identifiers (OIDs) 
-as defined in the ITU-T X.660 and X.670 Recommendation series, and Universally 
-Unique IDentifiers (UUIDs) [RFC4122].  When using an administratively delegated
-namespace, the definer of a name needs to take reasonable precautions to ensure
-they are in control of the portion of the namespace they use to define the 
-name.</p></li>
+<p>A name in a namespace that enables names to be allocated in a manner such that they are highly unlikely to collide with other names.  Examples of collision-resistant namespaces include: Domain Names, Object Identifiers (OIDs) as defined in the ITU-T X.660 and X.670 Recommendation series, and Universally Unique IDentifiers (UUIDs) [RFC4122].  When using an administratively delegated namespace, the definer of a name needs to take reasonable precautions to ensure they are in control of the portion of the namespace they use to define the name.</p></li>
 
 <li><h4>Stewards' names - unresolved problem</h4>
 
@@ -265,63 +198,30 @@ name.</p></li>
 &nbsp;&nbsp;<em>paris.france.eu</em><br />
 is very different from<br />
 &nbsp;&nbsp;<em>paris.texas.usa</em><br />
-However, upon registration (currently) all <em>openmoney</em> <em>stewards</em>
-create a <em>stewardname</em> which is immediately put into the <em>root 
-namespace</em>.
+However, upon registration (currently) all <em>openmoney</em> <em>stewards</em> create a <em>stewardname</em> which is immediately put into the <em>root namespace</em>.
 
-<p>How can we avoid the sort of name collision problem encountered generally by 
-later adopters of many services (such as Google or eBay) where, after trying a 
-ridiculously large number of options username and finding that each has already 
-been taken, they often end up having to accept accepting a horrendous 
-autogenerated suggestion such as "fred3896"?</p>
+<p>How can we avoid the sort of name collision problem encountered generally by later adopters of many services (such as Google or eBay) where, after trying a ridiculously large number of options username and finding that each has already been taken, they often end up having to accept accepting a horrendous autogenerated suggestion such as "fred3896"?</p>
 
 <p><strong>Automatic generation of, or allocation to, a namespace?</strong></p>
     
-<p>Maybe the initial namespace assigned to a new steward should be generated 
-automatically from some additional details provided - such as town, 
-county/state/whatever, country, continent, postcode/zip/whatever, etc.
-In this case, new <em>steward</em> "fred" would be competing against a much 
-smaller numbre of other other <em>Fred</em>s, and would therefore experience
-less difficulty in finding an acceptable username if such a clash were to occur. 
-This approach would also result in the automatic creation of useful geographical
-<em>namespaces</em> (where not already available).<p>
+    <p>Maybe the initial <em>namespace</em> assigned to a new <em>steward</em> should be generated automatically from some additional details provided - such as town, county/state/whatever, country, continent, postcode/zip/whatever, etc. In this case, new <em>steward</em> "fred" would be competing against a much smaller numbre of other other <em>Fred</em>s, and would therefore experience less difficulty in finding an acceptable username if such a clash were to occur. This approach would also result in the automatic creation of useful geographical <em>namespaces</em> (where not already available).<p>
 
-<p>The retention of such information would raise GDPR issues anywhere in Europe,
-and perhaps similar issues in most other parts of the world. In this case, 
-responsibility for maintaining the user's details could perhaps be delegated to
-a third party well set up for that purpose. For example, MailerLite's API is 
-very easy to use and seems to provide everything that might be wanted to offload
-such a burden.)<p>
+<p>The retention of such information would raise GDPR issues anywhere in Europe, and perhaps similar issues in most other parts of the world. In this case, responsibility for maintaining the user's details could perhaps be delegated to a third party well set up for that purpose. For example, MailerLite's API is very easy to use and seems to provide everything that might be wanted to offload such a burden.)<p>
     
-<p>There is, however, no need to retain such information. An identifier 
-comprising a short <em>stewardname</em> <u>as preferred</u> along with the 
-<em>namespace</em></p> generated automatically from location details could 
-entered at the time of registration.</p>
+<p>There is, however, no need to retain such information. An identifier comprising a short <em>stewardname</em> <u>as preferred</u> along with the <em>namespace</em></p> generated automatically from location details could entered at the time of registration.</p>
 
-<p>Alternatively, a completely random but unique initial namespace could be 
-generated as a starting point for the new steward - after which she/he/it could 
-create its own within an existing accessible <em>namespace</em>.</p>
+<p>Alternatively, a completely random but unique initial <em>namespace</em> could be generated as a starting point for the new <em>steward</em> - after which she/he/it could create its own within an existing accessible <em>namespace</em>.</p>
 
 <p><strong>Use of email address as <em>steward name</em>?</strong></p>
 
-<p>A better alternative might be to use the <em>steward</em>'s email address as 
-the <em>stewardname</em> since this <em>should</em> be uniquely assigned to the 
-<em>steward</em>. This would mean that the <em>stewardname</em> would change
-every time the <em>steward</em> changed her/his/its email address, but that 
-would not be a problem as long as the (mutable) <em>stewardname</em> were mapped
-internally to an immutable ID (itself mapping to other mutable identification 
-such as public key). The risk of misappropriation of the email address could be
-mitigated by the use of a <em>steward</em>-defined PIN.</p></li>
+<p>A better alternative might be to use the <em>steward</em>'s email address as the <em>stewardname</em> since this <em>should</em> be uniquely assigned to the <em>steward</em>. This would mean that the <em>stewardname</em> would change every time the <em>steward</em> changed her/his/its email address, but that would not be a problem as long as the (mutable) <em>stewardname</em> were mapped internally to an immutable ID (itself mapping to other mutable identification such as public key). The risk of misappropriation of the email address could be mitigated by the use of a <em>steward</em>-defined PIN.</p></li>
 
 </ol> 
 
 <hr size="1">
 
-<p class="footnote">This document was expanded (on 2020-06-28 by 
-<a href="https://github.com/jethro-swan/">John Waters</a>) from 
-<a href="https://paper.dropbox.com/doc/openmoney-specifications--A2ueQsb5n1iIn0oDC6yCjCFjAg-ZCwb9XOtbLSwZxrlnb5tR">the 
-earlier specification</a> (written by Dominique Legault and Michael Linton) in 
-order to incorporate additional notes, annotations, etc.</p>
+<p class="footnote">This document was expanded (on 2020-06-28 by <a href="https://github.com/jethro-swan/">John Waters</a>) from 
+<a href="https://paper.dropbox.com/doc/openmoney-specifications--A2ueQsb5n1iIn0oDC6yCjCFjAg-ZCwb9XOtbLSwZxrlnb5tR">the earlier specification</a> (written by Dominique Legault and Michael Linton) in order to incorporate additional notes, annotations, etc.</p>
     
 <p class="footnote">The <a href="https://github.com/openmoney/specification/">source</a> 
 for this page.</p>
