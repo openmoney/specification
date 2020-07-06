@@ -8,6 +8,8 @@
 body, div, p, h1, h2, h3, a, li { font-family: Lucida Grande,Verdana,Helvetica,Arial,sans-serif; }
 body { font-size: 14px; }
 .footnote { font-size: 12px; }
+.deleted { color: #000080; text-decoration: line-through; }
+.added { color: #800000; }
 a { text-decoration:none; }
 a:link { color:#006000; }
 a:visited { color:#106010; }
@@ -78,6 +80,8 @@ ul { margin-top: 0; }
 
 <li><p>When a <em>steward</em> registers, it is given a private <em>namespace</em> with the <em>namespace</em> name "<em>stewardname</em>" as a child of the <em>root namespace</em> configured.</p>
 <p>(In the <a href="https://github.com/openmoney/current-implementation/">current reference/test implementation</a>, the <em>root namespace</em> is fixed as "cc" so every <em>steward</em> is given the <em>namespace</em> "<em>stewardname.cc</em>" upon registration.)</p></li>
+    
+<li><p class="addition">Once registered, a <em>steward</em> may join any number of <em>namespaces</em> (subject to the permission if those <em>namespace</em>s' <em>stewards</em>) under any <em>name</em> not already used within that <em>namespace</em>.</p></li>
 
 <li><p>Every <em>namespace</em> can also enclose a set of <em>currencies</em> or <em>accounts</em> under the control of that <em>namespace</em>'s <em>steward</em> - i.e.<ul>
   <li><em>currency</em> parameters are declared by that/those <em>steward</em>(s)</li>
