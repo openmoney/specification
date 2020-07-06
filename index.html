@@ -78,8 +78,9 @@ ul { margin-top: 0; }
 
 <ul>
 
-<li><p>When a <em>steward</em> registers, it is given a private <em>namespace</em> with the <em>namespace</em> name "<em>stewardname</em>" as a child of the <em>root namespace</em> configured.</p>
-<p>(In the <a href="https://github.com/openmoney/current-implementation/">current reference/test implementation</a>, the <em>root namespace</em> is fixed as "cc" so every <em>steward</em> is given the <em>namespace</em> "<em>stewardname.cc</em>" upon registration.)</p></li>
+<li><p>When a <em>steward</em> registers, it is given a private <em>namespace</em> with the <em>namespace</em> name "<em>stewardname</em>" as a child of the <span class="added">one of the</span> <em>root namespace</em> <span class="added">available</span>.</p>
+    
+<p>(In the <a href="https://github.com/openmoney/current-implementation/">current reference/test implementation</a>, the <span class="added">only</span><em>root namespace</em> <span class="added">available</span>is fixed as "cc" so every <em>steward</em> is given the <em>namespace</em> "<em>stewardname.cc</em>" upon registration.)</p></li>
     
 <li><p class="added">Once registered, a <em>steward</em> may join any number of <em>namespaces</em> (subject to the permission if those <em>namespace</em>s' <em>stewards</em>) under any <em>name</em> not already used within that <em>namespace</em>.</p></li>
 
