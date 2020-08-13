@@ -1,32 +1,32 @@
 <html>
 
 <head>
-    
+
 <title>openmoney software specification</title>
 
 <style type="text/css">
-    
+
     body, div, p, h1, h2, h3, a, li { font-family: Lucida Grande,Verdana,Helvetica,Arial,sans-serif; }
     body { font-size: 14px; }
-    
+
     .footnote { font-size: 12px; }
-    
+
     .deleted { color: #000080; text-decoration: line-through; }
     .added { color: #800000; }
     .moved { color: #600060; }
-    
+
     td { font-size: 14px; background: #E0F0E0; }
     td.col-label { color: #E0E0F0; font-weight: bold; background: #004000; }
     td.row-label { color: #E0E0F0; font-weight: bold; background: #004000; }
     td.row-notes { color: #E0E0F0; bold; background: #004000; font-size: 12px; }
     td.blank { font-size: 12px; background: #FFFFFF; }
-    
+
     a { text-decoration:none; }
     a:link { color:#006000; }
     a:visited { color:#106010; }
     a:active { color:#008000; }
     a:hover { color:#209020; }
-    
+
     h1 { font-size: 28px; font-weight: bold; color: #008000; }
     h2 { font-size: 24px; font-weight: bold; color: #008000; }
     h3 { font-size: 20px; font-weight: bold; color: #008000; }
@@ -40,8 +40,8 @@
     img.align-left { float:left; padding:20px; text-align:left; }
     img.align-left-middle { float:left; padding:30px; vertical-valign:middle; }
 
-</style> 
-    
+</style>
+
 </head>
 
 <body>
@@ -49,9 +49,9 @@
 <h1>openmoney software specification</h1>
 
 <hr size="1">
-    
+
 <h3>Introduction</h3>
-    
+
 <p>The term <em>open money</em> (two words, lower case) is an aspect of free speech - it is a context (see <a href="https://sites.google.com/site/economicgroups/neweconomy">REA</a>), and <em>open money</em> can be called <u>free</u> money (as in <em>free speech</em>, not as in free beer/lunch/load/ride).</p>
 
 <p>The term <em>openmoney</em> (one word, lower case) refers to <u>any</u> software able to support the requirements of an <em>open money</em> implementation, operating in accordance with the principles and intellectual properties of the <a href="http://letsystem.org/">LETSystem Trust</a>.</p>
@@ -86,7 +86,7 @@
   <li><u>accounting of events</u></li>
   <li><u>fulfilment of promises</u> (commitments)</li>
   </ul></p>
-  
+
 <p>To use <em>open money</em> is to mind your own business.</p></li>
 
 <li><p>Every <em>user</em> has a <em>username</em>, and a public key.</p>
@@ -101,25 +101,25 @@
 <li><p>The <em>openmoney</em> implementation may make provision for the <em>user</em>'s public and private key to be generated deterministically using its <em>name</em> and password.</p></li>
 
 <li><p>When a <em>user</em> registers, it is given a private <em>namespace</em> with the <em>namespace</em> name "<em>username</em>" as a child of the one of the <em>root namespace</em> available.</p>
-    
+
 <p>(In the <a href="https://github.com/openmoney/current-implementation/">current demonstration/test implementation</a>, the only <em>root namespace</em> available is fixed as "cc" so every <em>user</em> is given the <em>namespace</em> "<em>username.cc</em>" upon registration.)</p></li>
-    
+
 <li><p>Once registered, a <em>user</em> may join any number of <em>namespaces</em> (subject to the permission if those <em>namespace</em>s' <em>stewards</em>) under any <em>name</em> not already used within that <em>namespace</em>.</p></li>
 
 </ul>
 
-<h3>stewards</h3>    
+<h3>stewards</h3>
 
 <ul>
-    
+
 <li><p>A <em>user</em> with responsibility for a <em>namespace</em> is referred to as a <em>steward</em> <u>of</u> that <em>namespace</em> or, alternatively, as a <em>governor</em> or <em>governing steward</em> of that <em>namespace</em>.</p>
 
 <li><p>A <em>user</em> with responsibility for a <em>currency</em> is referred to as a <em>steward</em> <u>of</u> that <em>currency</em> or, alternatively, as a <em>governor</em> or <em>governing steward</em> of that <em>currency</em>.</p>
 
-<li><p>A <em>user</em> with responsibility for an <em>account</em> is referred to as a <em>steward</em> of that <em>account</em>.</p>    
-  
+<li><p>A <em>user</em> with responsibility for an <em>account</em> is referred to as a <em>steward</em> of that <em>account</em>.</p>
+
 <p>The <em>steward</em> of a <em>namespaces</em> has unconditional privileges over that <em>namespace</em> and any <em>namespaces</em>, <em>currencies</em>, <em>accounts</em> and <em>users</em> within it.</p>
-    
+
 <p>Within a <em>(parent) namespace</em> a <em>user</em> is authorized only to create <em>names</em> (<em>namespaces</em>, <em>currencies</em> and <em>accounts</em>), of which it is the <em>steward</em>, and these persist only as long as authorized by the <em>stewards</em> (<em>governors</em>) of the <em>(parent) namespace</em>.</p>
 
 </ul>
@@ -131,7 +131,7 @@
 <p>Every <em>namespace</em> is managed (controlled) by a set of one or more <em>steward</em>(s).</p>
 
 <li><p>A <em>namespace</em> is an enclosure.</p></li>
-    
+
 <li><p>Every <em>namespace</em> can enclose other <em>namespaces</em>.</p>
 
 <li><p>Every <em>namespace</em> can also enclose a set of <em>currencies</em> or <em>accounts</em> under the control of that <em>namespace</em>'s <em>governing stewards</em>(s) - i.e.<ul>
@@ -141,7 +141,7 @@
 
 <li><p>Each <em>namespace</em> is identified by a string divided into substrings (<em>namespace names</em>, in each case a lower case letter followed by a string of arbitrary length containing any combinatation of lower case letters, digits, "_" or "-") separated by the character ".". Therefore, with the exception of the <em>root namespace</em>, each <em>namespace</em> comprises at least two parts - <em>child.parent</em> - where the latter identified by its full ancestry "path" back to the <em>root namespace</em>) and is therefore globally unique [note 1]. For example, the following examples represent two different <em>namespaces</em>:<br />
 &nbsp;&nbsp;<em>berkshire.england.uk.europe</em><br />
-&nbsp;&nbsp;<em>berkshire.massachussets.usa.north.america</em><br /> 
+&nbsp;&nbsp;<em>berkshire.massachussets.usa.north.america</em><br />
 where both have the same <em>namespace name</em> at the start of the string but each has a different <em>parent namespace</em>.</p></li>
 
 <li><p>Every <em>governing steward</em> of a <em>namespace</em> is notified when any of its other <em>stewards</em> creates a child <em>namespace</em>, <em>currency</em> or <em>account</em> there.</p></li>
@@ -221,9 +221,9 @@ where both have the same <em>namespace name</em> at the start of the string but 
 </ul>
 
 <br />
-    
+
 <hr size="1">
-    
+
 <table border="0" cellpadding="5" cellspacing="2" width="100%">
     <tr align="left" valign="top">
         <td rowspan="3" class="blank" valign="bottom"><em>names</em> are reserved within a <em>parent namespace</em> for the four categories below:</td>
@@ -320,7 +320,7 @@ where both have the same <em>namespace name</em> at the start of the string but 
         <td></td>
         <td></td>
         <td></td>
-    </tr> 
+    </tr>
 <table>
 
 <p><strong>More on terminology</strong></p>
@@ -373,6 +373,12 @@ where both have the same <em>namespace name</em> at the start of the string but 
 
 <p style="clear:both"></p>
 
+<p><strong>relationships between named objects</strong></p>
+
+<img src="img/nesting_3_levels_4g.png" class="align-left-middle" width="1050" />
+
+<p style="clear:both"></p>
+
 <p><strong>recursive nesting of namespaces</strong></p>
 
 <p>The following diagram illustrates the recursive <em>namespace</em> structure.</p>
@@ -387,18 +393,12 @@ where both have the same <em>namespace name</em> at the start of the string but 
 
 <p>And so on.</p>
 
-<p style="clear:both"></p>
-
-<p><strong>relationships between named objects</strong></p>
-
-<img src="img/nesting_3_levels_4g.png" class="align-left-middle" width="1050" />
-
 
 <p style="clear:both"></p>
 
 <hr size="1">
- 
-<h3>notes</h3> 
+
+<h3>notes</h3>
 
 <ol>
 
@@ -419,23 +419,23 @@ However, upon registration (currently) all <em>openmoney</em> <em>stewards</em> 
 <p>How can we avoid the sort of name collision problem encountered generally by later adopters of many services (such as Google or eBay) where, after trying a ridiculously large number of options username and finding that each has already been taken, they often end up having to accept accepting a horrendous autogenerated suggestion such as "fred3896"?</p>
 
 <p><strong>Automatic generation of, or allocation to, a namespace?</strong></p>
-    
+
 <p>Maybe the initial <em>namespace</em> assigned to a new <em>steward</em> should be generated automatically from some additional details provided - such as town, county/state/whatever, country, continent, postcode/zip/whatever, etc. In this case, new <em>steward</em> "fred" would be competing against a much smaller numbre of other other <em>Fred</em>s, and would therefore experience less difficulty in finding an acceptable username if such a clash were to occur. This approach would also result in the automatic creation of useful geographical <em>namespaces</em> (where not already available).<p>
 
 <p>The retention of such information would raise GDPR issues anywhere in Europe, and perhaps similar issues in most other parts of the world. In this case, responsibility for maintaining the user's details could perhaps be delegated to a third party well set up for that purpose. For example, MailerLite's API is very easy to use and seems to provide everything that might be wanted to offload such a burden.)<p>
-    
+
 <p>There is, however, no need to retain such information. An identifier comprising a short <em>stewardname</em> <u>as preferred</u> along with the <em>namespace</em></p> generated automatically from location details could entered at the time of registration.</p>
 
 <p>Alternatively, a completely random but unique initial <em>namespace</em> could be generated as a starting point for the new <em>steward</em> - after which it could create its own within an existing accessible <em>namespace</em>.</p>
 
-</ol> 
+</ol>
 
 <hr size="1">
 
 <p class="footnote">This document has been gradually expanded (in various stages between 2020-06-28 and 2020-08-06 by <a href="https://github.com/jethro-swan/">John Waters</a>) from <a href="https://paper.dropbox.com/doc/openmoney-specifications--A2ueQsb5n1iIn0oDC6yCjCFjAg-ZCwb9XOtbLSwZxrlnb5tR">the earlier specification</a> (written by Dominique Legault and Michael Linton) in order to incorporate additional notes, annotations, etc.</p>
-    
+
 <p class="footnote">[The <a href="https://github.com/openmoney/specification/">source</a> for this page.]</p>
-    
+
 </body>
 
 </html>
