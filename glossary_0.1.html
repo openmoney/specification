@@ -50,7 +50,7 @@
       Every <a href="#terms_user">user</a> has a unique <a href="#terms_primary_identity">primary identity</a> defined within a <a href="#terms_namespace">namespace</a>, and that <a href="#terms_namespace">namespace</a> is referred to as a <a href="#terms_registry">registry</a> in that context.
     </p>
     <p>
-      Every <a href="#terms_user">user</a> <u>may</u> have one or more <a href="#terms_secondary_identity">secondary identities</a>, each contained within a different <a href="#terms_namespace">namespace</a> with the permission of that <a href="#terms_namespace">namespace</a>'s <a href="#terms_steward">steward</a>(s).
+      Every <a href="#terms_user">user</a> <u>may</u> have one or more <a href="#terms_secondary_identity">secondary identities</a>, each contained within a different <a href="#terms_namespace">namespace</a> with the authorization of that <a href="#terms_namespace">namespace</a>'s <a href="#terms_steward">steward</a>(s).
     </p>
   </li>
   <li>
@@ -71,7 +71,7 @@
   <li>
     <h4 id="terms_account">account</h4>
     <p>
-      An <a href="#terms_account">account</a> is a <em>variable</em> associated with (and its characteristics defined by) a <a href="#terms_currency">currency</a> with the permission of that <a href="#terms_currency">currency</a>'s <a href="#terms_steward">steward</a>(s).
+      An <a href="#terms_account">account</a> is a <em>variable</em> associated with (and its characteristics defined by) a <a href="#terms_currency">currency</a> with the authorization of that <a href="#terms_currency">currency</a>'s <a href="#terms_steward">steward</a>(s).
     </p>
     <p>
       An <a href="#terms_account">account</a> is owned/held by either a <a href="#terms_primary_identity">primary identity</a> or a <a href="#terms_secondary_identity">secondary identity</a>.
@@ -93,6 +93,12 @@
     <h4 id="terms_instance">instance</h4>
     <p>
       An <a href="#terms_instance">instance</a> of <em>open money</em> is a distinct <em>tree</em> of <a href="#terms_namespace">namespaces</a>.
+    </p>
+    <p>
+      A (web) server may host any number of distinct <a href="#terms_instance">instances</a>.
+    </p>
+    <p>
+      A longer term (and low priority) objective is to enable any such <em>tree</em> to be grafted on to (i.e. moved to within) any <a href="terms_namespace">namespace</a> within a distinct <a href="#terms_instance">instances</a>, thereby forming a <u>new</u> <a href="#terms_instance">instance</a>. The <em>root</em> of an <a href="#terms_instance">instance</a> cannot be grafted on to a <a href="terms_namespace">namespace</a> within itself; otherwise this would create a loop.
     </p>
   </li>
   <li>
