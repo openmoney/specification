@@ -1,0 +1,238 @@
+<html>
+
+<head>
+
+<title>open money glossary</title>
+
+<link rel="stylesheet" type="text/css" href="css/openmoney.css">
+
+</head>
+
+<body>
+
+<h1>open money glossary</h1>
+
+<p>
+  The following terms are used in the context of <a href="#terms_open_money"><em>open money</em></a> software (see <a href="index.html">specification</a>):
+</p>
+<ul>
+  <li>
+    <h4 id="terms_name">name</h4>
+    <p>
+      A string of characters uniquely identifying an <em>entity</em> (a <a href="#terms_user_identity">user identity</a>, a <a href="#terms_currency">currency</a>, an <a href="#terms_account">account</a> or a <a href="#terms_namespace">namespace</a>).
+    </p>
+  </li>
+  <li>
+    <h4 id="terms_namespace">namespace</h4>
+    <p>
+      An <em>entity</em> enclosing/containing <a href="#terms_name">names</a> of <em>entities</em>, including other <a href="#terms_namespace">namespaces</a>.
+    </p>
+    <p>
+      A <a href="#terms_namespace">namespace</a> enclosing another <a href="#terms_namespace">namespace</a> is referred to as the <em>parent</em> of the latter, and the latter is referred to as a <em>child</em> of the former. The nesting of <a href="#terms_namespace">namespaces</a> leads naturally to the extension of these terms in both directions: <em>grandparents</em>, <em>great-grandparents</em>, etc. (<em>ancestors</em> collectively) and <em>grandchildren</em>, <em>great-grandchildren</em>, etc. (<em>descendants</em> collectively).
+      </e>
+    </p>
+    <p>
+      Every <a href="#terms_name">name</a> is unique within the <a href="#terms_namespace">namespace</a> containing it but the same <a href="#terms_name">name</a> may appear in any number of other <a href="#terms_namespace">namespaces</a>.
+    </p>
+    <p>
+      In general there is no relationship between entities identified by the same <a href="#terms_name">name</a> enclosed within different <a href="#terms_namespace">namespaces</a>. The one exception is that a <a href="#terms_secondary_identity">secondary identity</a> enclosed within one <a href="#terms_namespace">namespace</a>    <u>may</u> optionally have the same <a href="terms_name">name</a> as the associated <a href="#terms_primary_identity">primary identity</a> enclosed within a different <a href="#terms_namespace">namespace</a>.
+    </p>
+  </li>
+  <li>
+    <h4 id="terms_user">user</h4>
+    <p>
+      A <a href="#terms_user">user</a> is an <em>entity</em> holding/owning one or more <a href="#terms_account">accounts</a>.
+    </p>
+    <p>
+      A <a href="#terms_user">user</a> may be a person, an organization or a machine/device.
+    </p>
+    <p>
+      Every <a href="#terms_user">user</a> has a unique <a href="#terms_primary_identity">primary identity</a> defined within a <a href="#terms_namespace">namespace</a>, and that <a href="#terms_namespace">namespace</a> is referred to as a <a href="#terms_registry">registry</a> in that context.
+    </p>
+    <p>
+      Every <a href="#terms_user">user</a> <u>may</u> have one or more <a href="#terms_secondary_identity">secondary identities</a>, each contained within a different <a href="#terms_namespace">namespace</a> with the authorization of that <a href="#terms_namespace">namespace</a>'s <a href="#terms_steward">steward</a>(s).
+    </p>
+  </li>
+  <li>
+    <h4 id="terms_primary_identity">primary identity</h4>
+    <p>
+      A <a href="#terms_user">user</a>'s <a href="#terms_primary_identity">primary identity</a> provides access to the <em>open money</em> <a href="#terms_instance">instance</a> by defining a unique identity associated with a real world <em>entity</em> along with everything used to authenticate that association.
+    </p>
+  </li>
+  <li>
+    <h4 id="terms_secondary_identity">secondary identity</h4>
+    <p>
+      A <a href="#terms_user">user</a>'s <a href="#terms_secondary_identity">secondary identity</a> relies upon the assocated <a href="#terms_primary_identity">primary identity</a> to provide access to the <em>open money</em> <a href="#terms_instance">instance</a>.
+    </p>
+    <p>
+      However, the <a href="#terms_account">accounts</a> held/owned by any <a href="#terms_secondary_identity">secondary identity</a> are distinct from those held/owned by the associated <a href="#terms_primary_identity">primary identity</a> and from those held/owned by any other <a href="#terms_secondary_identity">secondary identity</a> associated with it.
+    </p>
+  </li>
+  <li>
+    <h4 id="terms_account">account</h4>
+    <p>
+      An <a href="#terms_account">account</a> is a <em>variable</em> associated with (and its characteristics defined by) a <a href="#terms_currency">currency</a> with the authorization of that <a href="#terms_currency">currency</a>'s <a href="#terms_steward">steward</a>(s).
+    </p>
+    <p>
+      An <a href="#terms_account">account</a> is owned/held by either a <a href="#terms_primary_identity">primary identity</a> or a <a href="#terms_secondary_identity">secondary identity</a>.
+    </p>
+  </li>
+  <li>
+    <h4 id="terms_steward">steward</h4>
+    <p>
+      A <a href="#terms_steward">steward</a> is a user holding a position of authority or ownership over a <em>named</em> <em>entity</em>.
+    </p>
+  </li>
+  <li>
+    <h4 id="terms_currency">currency</h4>
+    <p>
+      A <a href="#terms_currency">currency</a> is a <em>variable type</em> with which at least two <a href="#terms_accounts">accounts</a> are associated. Within the context of <em>open money</em>, these accounts always sum to zero. (Within the extended context of <em>open measures</em>, that restriction does not apply. However, that is beyond the scope of this section.)
+    </p>
+  </li>
+  <li>
+    <h4 id="terms_instance">instance</h4>
+    <p>
+      An <a href="#terms_instance">instance</a> of <em>open money</em> is a distinct <em>tree</em> of <a href="#terms_namespace">namespaces</a>.
+    </p>
+    <p>
+      A (web) server may host any number of distinct <a href="#terms_instance">instances</a>.
+    </p>
+    <p>
+      A longer term (and low priority) objective is to enable any such <em>tree</em> to be grafted on to (i.e. moved to within) any <a href="terms_namespace">namespace</a> within a distinct <a href="#terms_instance">instances</a>, thereby forming a <u>new</u> <a href="#terms_instance">instance</a>. The <em>root</em> of an <a href="#terms_instance">instance</a> cannot be grafted on to a <a href="terms_namespace">namespace</a> within itself; otherwise this would create a loop.
+    </p>
+  </li>
+  <li>
+    <h4 id="terms_registry">registry</h4>
+    <p>
+      A <a href="#terms_registry">registry</a> is <u>any</u> <a href="#terms_namespace">namespace</a> in which <a href="#terms_primary_identity">primary identities</a> are defined.
+    </p>
+    <p>
+      Upon logging into any <em>open money</em> <a href="#terms_instance">instance</a> using its <a href="#terms_primary_identity">primary identy</a>, that <a href="#terms_registry">registry</a> is the <a href="#terms_namespace">namespace</a> in which that <em>user</em> starts.
+    </p>
+    <p>
+      Upon logging into any <em>open money</em> <a href="#terms_instance">instance</a> using any <a href="#terms_secondary_identity">secondary identy</a>, the <em>user</em> lands in the <a href="#terms_namespace">namespace</a> enclosing that <a href="#terms_secondary_identity">secondary identity</a>.
+    </p>
+    <p>
+      In either case, the complete <em>user</em>.<a href="#terms_namespace">namespace</a> string is necessary to identify the <em>user</em> identity when logging in.
+    </p>
+  </li>
+</ul>
+
+<hr />
+<p>
+  The following terms are used in the wider context of <a href="#open_money">open money</a> and <a href="#terms_open_measures">open measures</a>:
+</p>
+<ul>
+  <li>
+    <h4 id="terms_open_money">open money</h4>
+    <p>
+      <a href="#terms_open_money">Open money</a> is a special case of <a href="#terms_open_measures">open measures</a> in which all <a href="#terms_account">accounts</a> are <em>scalar variables</em> and where all <a href="#terms_account">accounts</a> in a specific <a href="#terms_currency">currency</a> sum to zero.
+    </p>
+    <p>
+      Examples of <a href="#terms_open_money">open money</a> units include physical quantities (such as time, length or energy<sup><a href="#footnotes_energy">1</a></sup>) and counts.
+    </p>
+    <p>
+      A special but important case of <a href="#terms_open_money">open money</a>, from which its name derives, is a unit metrically equivalent<sup><a href="#footnotes_metrical_equivalence">2</a></sup> to, but distinct from, the unit of <em>legal tender</em> in use locally. Such a <a href="#terms_currency">currency</a> is <a href="#terms_money">money</a> and has significance only in the context provided by that <em>legal tender</em>, and both are <a href="#terms_money">money</a>.
+    </p>
+    <p>
+      The only <em>operation</em> associated with <a href="#terms_open_money">open money</a> is <a href="#terms_payment">payment</a>.
+    </p>
+  </li>
+  <li>
+    <h4 id="terms_money">money</h4>
+    <p>
+      The term <a href="#terms_money">money</a> refers to anything accepted as settlement of an obligation or commitment. A payment accepted in <a href="#terms_open_money">open money</a> is <em>de facto</em> money.
+    </p>
+  </li>
+  <li>
+    <h4 id="terms_payment">payment</h4>
+    <p>
+      In the context of <a href="#open_money">open money</a>, a <a href="#terms_payment">payment</a> is the simultaneous adjustment by the same amount of two <a href="#terms_account">accounts</a> in the same <a href="#terms_currency">currency</a>, one (the <a href="#terms_payer">payer</a>) being decreased and the other (the <a href="#terms_payee">payee</a>) being increased.
+    </p>
+  </li>
+  <li>
+    <h4 id="terms_open_measures">open measures</h4>
+    <p>
+      <a href="#terms_open_measures">Open measures</a> generalizes <a href="#terms_open_money">open money</a> to include <em>compound currency types</em> and their many associated operations, and places no requirement for the <a href="#terms_account">accounts</a> in a specific <a href="#terms_currency">currency</a> sum to zero.
+    </p>
+  </li>
+  <li>
+    <h4 id="terms_open_metrics">open metrics</h4>
+    <p>
+      See <a href="#terms_open_measures">open measures</a>.
+    </p>
+  </li>
+  <li>
+    <h4 id="terms_co-money">co-money</h4>
+    <p>
+
+    </p>
+  </li>
+  <li>
+    <h4 id="terms_covestment">covestment</h4>
+    <p>
+
+    </p>
+  </li>
+  <li>
+    <h4 id="terms_community_way">community way</h4>
+    <p>
+
+    </p>
+  </li>
+  <li>
+    <h4 id="terms_circular_money">circular money</h4>
+    <p>
+
+    </p>
+  </li>
+<!--
+  <li>
+    <h4 id="terms_"></h4>
+    <p>
+
+    </p>
+  </li>
+-->
+</ul>
+
+<hr />
+
+<h3>Notes</h3>
+
+<ol>
+  <li>
+    <p id="energy" class="footnote">
+      The term <strong>energy</strong> refers strictly to a quantity with physical dimensions ML<sup>2</sup>T<sup>-2</sup>. A typical use would be for accounting in energy generation, storage, use and loss in electrical microgrids at various scales.
+    </p>
+  </li>
+  <li>
+    <p id="footnotes_metrical_equivalence">
+      The term <strong>metrically equivalent</strong> in this context means that goods and services are priced the same for <em>legal tender</em> (a national <a href="#terms_money">money</a>) and its local <a href="#terms_open_money">open money</a> counterpart, whichever is accepted as <em>payment</em> and in whatever proportion.
+    </p>
+  </li>
+</ol>
+
+
+
+
+<br />
+
+<div class="footbar">
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
+
+<p>
+  Authors/contributors include:
+</p>
+<ul>
+  <li>
+    John Waters
+  </li>
+</ul>
+
+</div>
+
+</body>
+
+</html>
