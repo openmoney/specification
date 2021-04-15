@@ -28,6 +28,8 @@ h5 { font-size: 12px; font-weight: bold; color: #005000; }
 p { margin-bottom: 0; }
 ul { margin-top: 0; }
 
+sup { font-size: 8px; }
+
 div.footbar { background-color: #A0D0A0;
 padding-top: 4px; padding-left: 4px; padding-bottom: 4px; }
 
@@ -38,4 +40,3 @@ img.align-left { float:left; padding:20px; text-align:left; }
 img.align-left-middle { float:left; padding:30px; vertical-valign:middle; }
 
 hr { border: 0; border-top: 1px solid #8c8c8c; border-bottom: 1px solid #fff; }
-
